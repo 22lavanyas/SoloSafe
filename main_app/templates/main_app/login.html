@@ -5,89 +5,102 @@
 <html lang="en">
 {% block content %}
 <title>Rescue | Login</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
     html {
-        scroll-behavior:smooth;
+        scroll-behavior: smooth;
     }
-        #myBtn {
-        display: none; 
-        position: fixed; 
-        bottom: 20px;  
-        right: 30px; 
-        z-index: 99; 
-        border: 2px black solid; 
-        outline: none; 
-        background-image:url("{% static 'Images/top.png' %}"); 
-        background-position:center;
-        background-repeat:no-repeat;
-        background-color:black; 
-        cursor: pointer; 
+
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        border: 2px black solid;
+        outline: none;
+        background-image:url("{% static 'Images/top.png' %}");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: black;
+        cursor: pointer;
         padding: 1.4rem;
         border-radius: 25rem;
-        }
-        #myBtn:hover {
-        background-color: white;
-        background-image:url("{% static 'Images/toph.png' %}"); 
     }
-    .display-4{
+
+    #myBtn:hover {
+        background-color: white;
+        background-image:url("{% static 'Images/toph.png' %}");
+    }
+
+    .display-4 {
         text-align: center;
-        color: black; 
+        color: black;
         font-family: 'Bangers', cursive;
     }
 
-    .lead{
-        text-align: center; 
+    .lead {
+        text-align: center;
         font-family: 'Overpass', sans-serif;
     }
 
-    @media only screen and (max-device-width: 768px){
+    @media only screen and (max-device-width: 768px) {
         label {
             font-size: 2.5rem;
         }
-        .button{
+
+        .button {
             font-size: 1.3em;
         }
-        .sign-btn{
+
+        .sign-btn {
             font-size: 1.3em;
             border-radius: 35px;
         }
-        .display-4{
+
+        .display-4 {
             font-size: 5.5em;
         }
-        .lead{
+
+        .lead {
             font-size: 2.5rem;
         }
-        .log-img{
+
+        .log-img {
             height: 500px;
         }
-        .register-text{
+
+        .register-text {
             font-size: 1em;
         }
     }
+
     /* google button css */
-    .gg{
-        width:240px;
-        height:40px;
-        border:0px;
+    .gg {
+        width: 240px;
+        height: 40px;
+        border: 0px;
         border-radius: 50px;
         background-color: #DB4437;
         font-family: 'Roboto', sans-serif;
-        font-size:20px;
-        color:white;
-        }
-    .gg i{
+        font-size: 20px;
+        color: white;
+    }
+
+    .gg i {
         margin-left: -20px;
-        padding-right:8px;
+        padding-right: 8px;
         margin: 0 auto;
     }
-    body > div.login-page > div > form > div > p:nth-child(2){
-            display: inline-block;
-            width: 98%;
-        }
+
+    body>div.login-page>div>form>div>p:nth-child(2) {
+        display: inline-block;
+        width: 98%;
+    }
 
     /* intro section styling */
     .intro-section {
@@ -98,10 +111,12 @@
         align-items: center;
         justify-content: center;
     }
+
     .intro-section img {
         width: 275px;
         flex: 0 1 auto;
     }
+
     .login-page-title {
         font-size: 2.75rem;
         font-family: "Bebas Neue", sans-serif;
@@ -124,6 +139,7 @@
         justify-content: center;
         text-align: center;
     }
+
     .intro-title h1 {
         font-size: 2.75rem;
         margin: 1em 0;
@@ -137,29 +153,32 @@
         padding: 2em 0;
         margin-bottom: 2em;
     }
+
     .login-img {
         width: 80%;
         height: auto;
     }
+
     .login-img img {
         width: 100%;
         height: auto;
     }
-    .login-form-div{
+
+    .login-form-div {
         width: auto;
         margin: 0 auto;
         justify-content: center;
     }
- 
+
     .button {
-        display: flex; 
-        align-items: center; 
+        display: flex;
+        align-items: center;
         justify-content: center;
     }
 
-    .login-text{
-        display: flex; 
-        align-items: center; 
+    .login-text {
+        display: flex;
+        align-items: center;
         justify-content: center;
         font-size: 1.8rem;
         font-weight: bold;
@@ -167,11 +186,11 @@
     }
 
     label {
-            font-size: 1.75rem;
-            color: #6C63FF;
-            margin: 1em 0 0.5em 0;
-            font-weight: 500;
-        }
+        font-size: 1.75rem;
+        color: #6C63FF;
+        margin: 1em 0 0.5em 0;
+        font-weight: 500;
+    }
 
     input[type="submit"] {
         background-color: #FFF;
@@ -209,6 +228,7 @@
         transition: all 0.5s ease-in-out;
         margin: 0 auto;
     }
+
     .login-sign-in a:hover {
         text-decoration: underline;
     }
@@ -218,7 +238,7 @@
         margin: 0 auto;
         align-items: center;
     }
-    
+
 
 
     @media (max-width:768px) {
@@ -226,87 +246,91 @@
             flex-direction: row;
             margin-bottom: 2em;
         }
+
         .intro-section img {
             width: 375px;
         }
-        .login-img{
+
+        .login-img {
             width: 275px;
             height: auto;
             margin: 0 auto;
         }
+
         .form-div {
             width: 90%;
             margin: 0 auto;
         }
-        
+
         .login-buttons {
             display: flex;
             flex-direction: column;
             justify-content: center;
             margin: 0 auto;
         }
+
         .row {
             margin: unset;
         }
 
     }
-
-    </style>   
+</style>
 <!-- </head>
 <body> -->
-    <section class="container intro-section">
-        <div class="intro-title" data-aos="fade-down">
-            <h1 class="login-page-title">WELCOME</h1>
-            <h2 class="login-page-text">Login through Registered Account</h2>
-        </div>
-    </section>
-    <section class="login-section container">
-        <form method="POST" class="login-form"> 
-            {% csrf_token %}         
-            <div class="row login-form-div">   
-                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                    <div class="login-img">
-                        <img data-aos="zoom-in" src="{% static 'Images/login.svg' %}" alt="log-in">
-                    </div>
+<section class="container intro-section">
+    <div class="intro-title" data-aos="fade-down">
+        <h1 class="login-page-title">WELCOME</h1>
+        <h2 class="login-page-text">Login through Registered Account</h2>
+    </div>
+</section>
+<section class="login-section container">
+    <form method="POST" class="login-form">
+        {% csrf_token %}
+        <div class="row login-form-div">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="login-img">
+                    <img data-aos="zoom-in" src="{% static 'Images/login.svg' %}" alt="log-in">
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                    <div class="form-div">{{form.as_p}}</div>
-                </div>
-                <script src='https://www.google.com/recaptcha/api.js'></script>
-                <div class="g-recaptcha" data-sitekey="6Ldj7dkaAAAAAMGNkatRmD99HA3UUWm2PZsCj0EX"></div>
-        
-            </div>  
-            <div class="login-sign-in" align="center">
-                <input type="submit" value="Sign In">
-                <h3 class="login-sign-in-text">New to Rescue? <a href="/register">Create an Account</a></h3>
-                <h3 class="login-sign-in-text"><a href="/reset_password" >Forgot Password?</a></h3>
             </div>
-        </form>
-        <div class="login-form-div">
-            <center>
-                <div class="or">
-                   <p>or</p>
-                </div>
-                <p><button class="gg" onclick="location.href = '{% provider_login_url 'google' %}';">
-                        <i class="fab fa-google fa-align-left" aria-hidden="true"></i>Log in with Google
-                    </button></p>
-            </center>  
-        </div>
-    </section>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="form-div">{{form.as_p}}</div>
+            </div>
+            <script src='https://www.google.com/recaptcha/api.js'></script>
+            <div class="g-recaptcha" data-sitekey="6LfRKF4pAAAAALTKbZFMB22_J7FfHIqNjwqDo49t"></div>
+            <!-- <div class="g-recaptcha" data-sitekey="6Ldj7dkaAAAAAMGNkatRmD99HA3UUWm2PZsCj0EX"></div> -->
 
-    <script>
-        const togglePassword = document.querySelector('#togglePassword');
-        const password = document.querySelector('#id_password');
-    
-        togglePassword.addEventListener('click', function (e) {
-            // toggle the type attribute
-            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-            password.setAttribute('type', type);
-            // toggle the eye slash icon
-            this.classList.toggle('fa-eye-slash');
-        });
-    
-    </script>
-    
-    {% endblock %}
+        </div>
+        <div class="login-sign-in" align="center">
+            <input type="submit" value="Sign In">
+            <h3 class="login-sign-in-text">New to Rescue? <a href="/register">Create an Account</a></h3>
+            <h3 class="login-sign-in-text"><a href="/reset_password">Forgot Password?</a></h3>
+        </div>
+    </form>
+    <div class="login-form-div">
+        <center>
+            <div class="or">
+                <p>or</p>
+            </div>
+            <p><button class="gg" onclick="location.href = '{% provider_login_url 'google' %}';">
+                    <i class="fab fa-google fa-align-left" aria-hidden="true"></i>Log in with Google
+                </button></p>
+        </center>
+    </div>
+</section>
+
+<script>
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#id_password');
+
+    togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+    });
+
+</script>
+
+{% endblock %}
 </body>

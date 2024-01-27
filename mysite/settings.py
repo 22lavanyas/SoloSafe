@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django
+from django.utils.encoding import force_str
+django.utils.encoding.force_text = force_str
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -55,6 +58,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "allauth.account.middleware.AccountMiddleware"
 ]
 
 ROOT_URLCONF = "mysite.urls"
@@ -159,9 +163,9 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "youremailid"  # eg : rescue@gmail.com
-EMAIL_HOST_PASSWORD = "youremailpassword"  # eg : 213@Hupo34$19wed
-DEFAULT_FROM_EMAIL = "youremailid"
+EMAIL_HOST_USER = "nbtaylor1031@gmail.com"  # eg : rescue@gmail.com
+EMAIL_HOST_PASSWORD = "fxmbvhcyrulpxkvs"  # eg : 213@Hupo34$19wed
+DEFAULT_FROM_EMAIL = "nbtaylor1031@gmail.com"
 
 
 # AUTHENTICATION SETUP
@@ -190,11 +194,16 @@ SOCIALACCOUNT_PROVIDERS = {
 
 # SECURITY WARNING: keep the secret key used in production secret!
 ...
-GOOGLE_RECAPTCHA_SITE_KEY = '6LfGawkbAAAAAEwMU9ElnUNXMSG5Az8uXGLRvXZs' #your reCAPTCHA SITE key 
+GOOGLE_RECAPTCHA_SITE_KEY = '6LfRKF4pAAAAALTKbZFMB22_J7FfHIqNjwqDo49t' #your reCAPTCHA SITE key 
+# GOOGLE_RECAPTCHA_SITE_KEY = '6LfGawkbAAAAAEwMU9ElnUNXMSG5Az8uXGLRvXZs' #your reCAPTCHA SITE key 
 
-GOOGLE_RECAPTCHA_SECRET_KEY = '6LfGawkbAAAAAEXmouoGwTWgBV2__O-2lbOcN9iF' #your reCAPTCHA SECRET key 
+
+GOOGLE_RECAPTCHA_SECRET_KEY = '6LfRKF4pAAAAAOBTt5Wrw4HZR64Cidujg_gUz0Ow' #your reCAPTCHA SECRET key 
+# GOOGLE_RECAPTCHA_SECRET_KEY = '6LfGawkbAAAAAEXmouoGwTWgBV2__O-2lbOcN9iF' #your reCAPTCHA SECRET key 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 ...
+# 6LfRKF4pAAAAALTKbZFMB22_J7FfHIqNjwqDo49t
+# 6LfRKF4pAAAAAOBTt5Wrw4HZR64Cidujg_gUz0Ow

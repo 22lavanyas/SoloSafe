@@ -19,7 +19,8 @@ from django.contrib.auth import views as auth_views
 from django.conf import settings
 from main_app import views
 from main_app.views import VerificationView
-from django.conf.urls import url, handler404
+# from django.conf.urls import url, handler404
+from django.urls import re_path as url
 from django.views.static import serve
 
 urlpatterns = [
@@ -64,4 +65,4 @@ urlpatterns = [
     path("delete_account/<str:username>", views.delete_account, name="delete_account"),
 
 ]
-handler404 = "main_app.views.page_not_found"  # noqa
+# handler404 = "main_app.views.page_not_found"  # noqa
