@@ -119,9 +119,13 @@ class VerificationView(View):
 
 
 def logout_request(request):
-    logout(request)
-    messages.info(request, "Logged out successfully!")
-    return redirect("main_app:home")
+    try:
+        logout(request)
+        messages.info(request, "Logged out successfully!")
+        return redirect("main_app:home")
+    except Exception as e:
+        print(e)
+        raise e
 
 
 def delete_account(request, username):
@@ -218,6 +222,7 @@ def emergency_contact(request):
 def create_contact(request):
     inst = contact(user=request.user)
     form = ContactForm(instance=inst)
+    print(request.method)
     if request.method == "POST":
         form = ContactForm(request.POST, instance=inst)
         if form.is_valid():
@@ -228,8 +233,34 @@ def create_contact(request):
         messages.error(request, "Invalid username or password")
     
     
-    return render(request, "main_app/create_contact.html", {'form':form, 'recaptcha_site_key':settings.GOOGLE_RECAPTCHA_SITE_KEY})
-    
+    return render(request, "main_app/create_contact.html", {'form':form})
+
+# def create_contact(request):
+#     inst, created = contact.objects.get_or_create(user=request.user)
+#     form = ContactForm(instance=inst)
+
+#     print("1\n")
+#     if request.method == "POST":
+#         print("2\n")
+#         form = ContactForm(request.POST, instance=inst)
+#         print(request.POST)
+#         print("Cleaned", form.cleaned_data)
+#         if form.is_valid():
+#             print("Valid hai")
+#             print("Cleaned", form.cleaned_data)
+#             form.save()
+#             messages.success(request, "New contact created successfully!!")
+#             messages.info(request, "An email has been sent to your contact!!")
+#             return redirect("main_app:emergency_contact")
+#         else:
+#             # Add an error message for invalid form
+#             print("3\n")
+#             print("Cleaned", form.cleaned_data)
+#             messages.error(request, "Invalid form submission. Please check your inputs.")
+
+#     print("Renderrreddd")
+#     print("Cleaned", form.cleaned_data)
+#     return render(request, "main_app/create_contact.html", {'form': form })
 
 
 def update_contact(request, pk):

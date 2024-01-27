@@ -76,7 +76,7 @@
             <p style="text-align: center;">They will get notify when you are in danger!!</p>
             <br>
             <br>
-            <form method="POST " style="display: contents; padding-left: 20%; ">
+            <form method="POST" style="display: contents; padding-left: 20%; ">
 
                 {% csrf_token %}
                 <div class="alert alert-info" role="alert">
@@ -89,6 +89,12 @@
                     <button style="color:white; border-radius: 25px; padding-bottom:35px "
                         class="btn btn-success btn-lg " name="submit " type="submit "><b>Create</b></button>
                 </div>
+                <!-- <script src='https://www.google.com/recaptcha/api.js'
+                    style="position: absolute; margin-left: 25px;"></script>
+
+
+                <div class="g-recaptcha" id="rcaptcha" data-sitekey="6LfRKF4pAAAAALTKbZFMB22_J7FfHIqNjwqDo49t"></div>
+                <span id="captcha" style="color:red"></span> -->
             </form>
 
 
@@ -96,11 +102,7 @@
 
         </div>
     </div>
-    <script src='https://www.google.com/recaptcha/api.js' style="position: absolute; margin-left: 25px;"></script>
 
-
-    <div class="g-recaptcha" id="rcaptcha" data-sitekey="6LfRKF4pAAAAALTKbZFMB22_J7FfHIqNjwqDo49t"></div>
-    <span id="captcha" style="color:red"></span>
     <!-- this will show captcha errors -->
 
 
