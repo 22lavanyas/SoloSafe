@@ -117,3 +117,4 @@ django-allauth==0.44.0
 pywhatkit==5.0
 black==20.8b1  
 flake8==3.8.4
+_sqlite3
