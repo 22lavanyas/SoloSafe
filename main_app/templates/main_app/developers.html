@@ -6,192 +6,193 @@
 {% block content %}
 <title>Rescue | Developers </title>
 <style>
-		html {
-			scroll-behavior:smooth;
-   		}
-		.container-dev-img {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+	html {
+		scroll-behavior: smooth;
+	}
+
+	.container-dev-img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.dev-img {
+		width: 30%;
+		min-width: 275px;
+		margin: 0 auto;
+	}
+
+	@media only screen and (max-device-width:475px) {
+
+		h4,
+		p {
+			font-size: 1.5rem;
 		}
 
+		.lead {
+			font-size: 1.75rem;
+		}
+	}
+
+	@media only screen and (max-device-width:320px) {
 		.dev-img {
-			width: 30%;
-			min-width: 275px;
-			margin: 0 auto;
+			margin-top: 6rem;
+		}
+	}
+
+	@media only screen and (min-width:768px) {
+		.developers-page {
+			position: relative;
 		}
 
-		@media only screen and (max-device-width:475px) {
-
-			h4,
-			p {
-				font-size: 1.5rem;
-			}
-
-			.lead {
-				font-size: 1.75rem;
-			}
+		.cards-div {
+			display: flex;
 		}
+	}
 
-		@media only screen and (max-device-width:320px) {
-			.dev-img {
-				margin-top: 6rem;
-			}
-		}
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
-		@media only screen and (min-width:768px) {
-			.developers-page {
-				position: relative;
-			}
-			.cards-div {
-				display: flex;
-			}
-		}
-
-		@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-
-		/* section {
+	/* section {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 		} */
 
-		.desing-card {
-			width: 300px;
-			height: 400px;
-			background-color: rgb(160, 10, 10);
-			margin-right: 1rem;
-			display: flex;
-			flex-direction: column;
-			box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-			position: relative;
-			font-family: 'Montserrat', sans-serif;
-		}
+	.desing-card {
+		width: 300px;
+		height: 400px;
+		background-color: rgb(160, 10, 10);
+		margin-right: 1rem;
+		display: flex;
+		flex-direction: column;
+		box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+		position: relative;
+		font-family: 'Montserrat', sans-serif;
+	}
 
-		.design-card .maincontent:hover {
-			box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-		}
+	.design-card .maincontent:hover {
+		box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+	}
 
-		.desing-card:after {
-			position: absolute;
-			content: '';
-			width: 60px;
-			height: 60px;
-			background-color: #2e2b2c;
-			right: -1px;
-			bottom: 0;
-			clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-		}
+	.desing-card:after {
+		position: absolute;
+		content: '';
+		width: 60px;
+		height: 60px;
+		background-color: #2e2b2c;
+		right: -1px;
+		bottom: 0;
+		clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+	}
 
-		.desing-card:before {
-			position: absolute;
-			content: '';
-			width: 60px;
-			height: 60px;
-			background-color: #2e2b2c;
-			left: 0;
-			top: 0;
-			clip-path: polygon(0% 0, 100% 0%, 0% 100%);
-			z-index: 1;
-		}
+	.desing-card:before {
+		position: absolute;
+		content: '';
+		width: 60px;
+		height: 60px;
+		background-color: #2e2b2c;
+		left: 0;
+		top: 0;
+		clip-path: polygon(0% 0, 100% 0%, 0% 100%);
+		z-index: 1;
+	}
 
-		.desing-card .box1 {
-			height: 200px;
-			background-color: #fff;
-			width: 100%;
-			position: relative;
-		}
+	.desing-card .box1 {
+		height: 200px;
+		background-color: #fff;
+		width: 100%;
+		position: relative;
+	}
 
-		.desing-card .box2 {
-			height: 200px;
-			background-color: #fff;
-			width: 100%;
-			position: relative;
-		}
+	.desing-card .box2 {
+		height: 200px;
+		background-color: #fff;
+		width: 100%;
+		position: relative;
+	}
 
-		.desing-card .box1::after {
-			position: absolute;
-			content: '';
-			width: 50%;
-			height: 90%;
-			background-color: rgb(160, 10, 10);
-			opacity: 0.8;
-			clip-path: polygon(0% 0, 100% 0%, 0% 100%);
-		}
+	.desing-card .box1::after {
+		position: absolute;
+		content: '';
+		width: 50%;
+		height: 90%;
+		background-color: rgb(160, 10, 10);
+		opacity: 0.8;
+		clip-path: polygon(0% 0, 100% 0%, 0% 100%);
+	}
 
-		.desing-card .box1::before {
-			position: absolute;
-			content: '';
-			width: 35%;
-			height: 60%;
-			background-color: rgb(160, 10, 10);
-			opacity: 0.8;
-			clip-path: polygon(0% 0, 100% 0%, 0% 100%);
-		}
+	.desing-card .box1::before {
+		position: absolute;
+		content: '';
+		width: 35%;
+		height: 60%;
+		background-color: rgb(160, 10, 10);
+		opacity: 0.8;
+		clip-path: polygon(0% 0, 100% 0%, 0% 100%);
+	}
 
-		.desing-card .box2::after {
-			position: absolute;
-			content: '';
-			width: 50%;
-			height: 90%;
-			background-color: rgb(160, 10, 10);
-			opacity: 0.8;
-			right: 0;
-			bottom: 0;
-			clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-		}
+	.desing-card .box2::after {
+		position: absolute;
+		content: '';
+		width: 50%;
+		height: 90%;
+		background-color: rgb(160, 10, 10);
+		opacity: 0.8;
+		right: 0;
+		bottom: 0;
+		clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+	}
 
-		.desing-card .box2::before {
-			position: absolute;
-			content: '';
-			width: 35%;
-			height: 60%;
-			background-color: rgb(160, 10, 10);
-			opacity: 0.8;
-			right: 0;
-			bottom: 0;
-			clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-		}
+	.desing-card .box2::before {
+		position: absolute;
+		content: '';
+		width: 35%;
+		height: 60%;
+		background-color: rgb(160, 10, 10);
+		opacity: 0.8;
+		right: 0;
+		bottom: 0;
+		clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+	}
 
-		.desing-card .content {
-			position: absolute;
-			width: 280px;
-			background-color: #fff;
-			height: 280px;
-			right: 10px;
-			top: 10px;
-		}
+	.desing-card .content {
+		position: absolute;
+		width: 280px;
+		background-color: #fff;
+		height: 280px;
+		right: 10px;
+		top: 10px;
+	}
 
-		.desing-card .maincontent {
-			position: absolute;
-			width: 260px;
-			background-color: #fff;
-			height: 380px;
-			right: 10px;
-			top: 10px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			text-align: center;
-		}
+	.desing-card .maincontent {
+		position: absolute;
+		width: 260px;
+		background-color: #fff;
+		height: 380px;
+		right: 10px;
+		top: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+	}
 
-		/* .desing-card .maincontent p {
+	/* .desing-card .maincontent p {
 		padding-left: 15px;
 		padding-right: 15px;
 	} */
 
-		.desing-card .maincontent h4 {
-			color: rgb(160, 10, 10);
-		}
-		
+	.desing-card .maincontent h4 {
+		color: rgb(160, 10, 10);
+	}
 </style>
-  
-  
+
+
 
 
 <body style="background-color:white;margin-top:50px;">
-	
+
 	<div class="developers-page">
 
 		<div class="container">
@@ -202,7 +203,7 @@
 					style="color: rgb(184, 25, 25); font-family: 'Bangers', cursive; margin-top: 3rem; ">ABOUT US</h1>
 				<br><br>
 				<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
-				<p class="lead" style="font-family: 'Overpass', sans-serif;">Welcome to Rescue, An initiative to fight
+				<p class="lead" style="font-family: 'Overpass', sans-serif;">An initiative to fight
 					against the
 					Heinous crimes against Women happening in the society.The most active way to inform that You are in
 					Danger and
@@ -223,7 +224,8 @@
 		</div>
 
 		<div class="container-dev-img">
-			<img class="dev-img" data-aos="fade-down" src="{% static 'Images/developers.png' %}" alt="dvelopers illustration">
+			<img class="dev-img" data-aos="fade-down" src="{% static 'Images/developers.png' %}"
+				alt="dvelopers illustration">
 		</div>
 		<section class="container my-4">
 			<div class="cards-div mx-auto">
@@ -232,17 +234,16 @@
 					<div class="box2"></div>
 					<div class="content"></div>
 					<div class="maincontent">
-						<h4>Utkarsh Mall</h4><br>
+						<h4>Lavanya Sharma</h4><br>
 						<p>Bachelor of Technology (B.Tech)</p><br>
 						<p>Computer Science Engineering (CSE)</p><br>
-						<p><strong>Role: </strong>Backend</p><br>
+						<!-- <p><strong>Role: </strong>Backend</p><br> -->
 
 						<div class="card-action">
 							<a style="color:white; background-color:rgb(0,115,177);"
-								href="https://www.linkedin.com/in/utkarsh-mall-16a0a31a0/" target="_blank"
-								class="btn">LinkedIn</a>
-							<a style="color:white; background-color:black;" href="https://github.com/Assertor1"
-								target="_blank" class="btn">Github</a>
+								href="https://www.linkedin.com/in/22lavanya" target="_blank" class="btn">LinkedIn</a>
+							<!-- <a style="color:white; background-color:black;" href="https://github.com/Assertor1" -->
+							<!-- target="_blank" class="btn">Github</a> -->
 						</div>
 					</div>
 				</div>
@@ -251,34 +252,34 @@
 					<div class="box2"></div>
 					<div class="content"></div>
 					<div class="maincontent">
-						<h4>Swapnil Srivastava</h4><br>
+						<h4>Mayank Lalwani</h4><br>
 						<p>Bachelor of Technology (B.Tech)</p><br>
 						<p>Computer Science Engineering (CSE)</p><br>
-						<p><strong>Role: </strong>Frontend</p><br>
+						<!-- <p><strong>Role: </strong>Frontend</p><br> -->
 						<div class="card-action">
 							<a style="color:white; background-color:rgb(0,115,177);"
-								href="https://www.linkedin.com/in/swapnil-srivastava-sparsh/" target="_blank"
+								href="https://linkedin.com/in/mayank-lalwani-8b9775226/" target="_blank"
 								class="btn">LinkedIn</a>
-							<a style="color:white; background-color:black;" href="https://github.com/swapnilsparsh"
-								target="_blank" class="btn">Github</a>
+							<!-- <a style="color:white; background-color:black;" href="https://github.com/swapnilsparsh"
+								target="_blank" class="btn">Github</a> -->
 						</div>
 					</div>
 				</div>
-				<div class="desing-card my-3 mx-auto"  data-aos="flip-left">
+				<div class="desing-card my-3 mx-auto" data-aos="flip-left">
 					<div class="box1"></div>
 					<div class="box2"></div>
 					<div class="content"></div>
 					<div class="maincontent">
-						<h4>Utkarsh Sharma</h4><br>
+						<h4>Lavi Kumar Goyal</h4><br>
 						<p>Bachelor of Technology (B.Tech)</p><br>
 						<p>Computer Science Engineering (CSE)</p><br>
-						<p><strong>Role: </strong>Content Designer</p><br>
+						<!-- <p><strong>Role: </strong>Content Designer</p><br> -->
 						<div class="card-action">
 							<a style="color:white; background-color:rgb(0,115,177);"
-								href="https://www.linkedin.com/in/utkarsh-sharma-663aa319b" target="_blank"
+								href="https://www.linkedin.com/in/lavi-kumar-goyal-756929211" target="_blank"
 								class="btn">LinkedIn</a>
-							<a style="color:white; background-color:black;" href="https://github.com/u-c0de" target="_blank"
-								class="btn">Github</a>
+							<!-- <a style="color:white; background-color:black;" href="https://github.com/u-c0de" target="_blank"
+								class="btn">Github</a> -->
 						</div>
 					</div>
 				</div>
