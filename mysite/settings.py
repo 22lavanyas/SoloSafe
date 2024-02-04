@@ -24,11 +24,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "p#dw566&a7f70whcd*$7k9cthul*pshe$xzd-+fiz)^lulf*=@"
-
+OMEGA = BASE_DIR
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
 
 
 # Application definition
@@ -203,7 +203,8 @@ GOOGLE_RECAPTCHA_SECRET_KEY = '6LcYNF4pAAAAAHaH322oTPLYM2-o_ojtHBgJvvYA' #your r
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
+# STATICFILES_DIRS = [os.path.join(BASE_DIR + "/main_app/", "static")]
+# STATIC_ROOT = os.path.join(BASE_DIR + "/main_app/", "static")
 ...
 # 6LfRKF4pAAAAALTKbZFMB22_J7FfHIqNjwqDo49t
 # 6LfRKF4pAAAAAOBTt5Wrw4HZR64Cidujg_gUz0Ow
