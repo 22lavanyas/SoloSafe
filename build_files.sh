@@ -4,7 +4,8 @@
 #!/bin/bash
 python3.9 -m ensurepip
 python3.9 -m pip install --upgrade pip
-source venv/bin/activate
+python3 -m venv myenv
+source myenv/bin/activate
 python3.9 -m pip install -r requirements.txt
 python3.9 manage.py collectstatic --noinput
 
