@@ -85,10 +85,21 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+#     }
+# }
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'VQZVYYeiIHVFzyTrmuonhadbynlqjyEx',
+        'HOST': 'monorail.proxy.rlwy.net',
+        'PORT': '36669'
+
     }
 }
 
@@ -144,7 +155,16 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = "/static/"
+
+# STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+# STATICFILES_DIRS = [os.path.join(BASE_DIR + "/main_app/", "static")]
+# STATIC_ROOT = os.path.join(BASE_DIR + "/main_app/", "static")
+
 MEDIA_URL = "/media/"
+
+
+
 
 if DEBUG:
 
@@ -202,7 +222,7 @@ GOOGLE_RECAPTCHA_SECRET_KEY = '6LcYNF4pAAAAAHaH322oTPLYM2-o_ojtHBgJvvYA' #your r
 # GOOGLE_RECAPTCHA_SECRET_KEY = '6LfGawkbAAAAAEXmouoGwTWgBV2__O-2lbOcN9iF' #your reCAPTCHA SECRET key 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 # STATICFILES_DIRS = [os.path.join(BASE_DIR + "/main_app/", "static")]
 # STATIC_ROOT = os.path.join(BASE_DIR + "/main_app/", "static")
 ...

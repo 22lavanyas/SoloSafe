@@ -26,8 +26,8 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("name", models.CharField(max_length=100)),
-                ("email", models.EmailField(max_length=254)),
+                ("name", models.CharField(max_length=255)),
+                ("email", models.EmailField(max_length=255)),
                 (
                     "relation",
                     models.CharField(

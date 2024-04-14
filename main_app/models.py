@@ -8,7 +8,7 @@ class contact(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="contact", null=True
     )
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=30)
     email = models.EmailField()
     mobile_no = models.CharField(max_length=15)
     Father = "Father"
@@ -29,7 +29,7 @@ class contact(models.Model):
         (Relative, "Relative"),
         (Other, "Other"),
     )
-    relation = models.CharField(max_length=10, choices=relations, default=Other)
+    relation = models.CharField(max_length=30, choices=relations, default=Other)
 
     def __str__(self):
         return self.name
@@ -37,5 +37,5 @@ class contact(models.Model):
 
 class Login(models.Model):
 
-    Username_or_Email = models.CharField(max_length=100)
-    password = models.CharField(max_length=32)
+    Username_or_Email = models.CharField(max_length=30)
+    password = models.CharField(max_length=30)

@@ -23,8 +23,8 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("Username_or_Email", models.CharField(max_length=100)),
-                ("password", models.CharField(max_length=32)),
+                ("Username_or_Email", models.CharField(max_length=255)),
+                ("password", models.CharField(max_length=255)),
             ],
         ),
     ]

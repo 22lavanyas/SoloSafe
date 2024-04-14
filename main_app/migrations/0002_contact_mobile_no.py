@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="contact",
             name="mobile_no",
-            field=models.CharField(default=django.utils.timezone.now, max_length=15),
+            field=models.CharField(default=django.utils.timezone.now, max_length=255),
             preserve_default=False,
         ),
     ]
