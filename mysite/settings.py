@@ -156,10 +156,10 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
 STATIC_URL = "/static/"
 
-# STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-# STATICFILES_DIRS = [os.path.join(BASE_DIR + "/main_app/", "static")]
-# STATIC_ROOT = os.path.join(BASE_DIR + "/main_app/", "static")
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR + "/main_app/", "static")]
+STATIC_ROOT = os.path.join(BASE_DIR + "/main_app/", "static")
 
 MEDIA_URL = "/media/"
 
@@ -222,7 +222,7 @@ GOOGLE_RECAPTCHA_SECRET_KEY = '6LcYNF4pAAAAAHaH322oTPLYM2-o_ojtHBgJvvYA' #your r
 # GOOGLE_RECAPTCHA_SECRET_KEY = '6LfGawkbAAAAAEXmouoGwTWgBV2__O-2lbOcN9iF' #your reCAPTCHA SECRET key 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 # STATICFILES_DIRS = [os.path.join(BASE_DIR + "/main_app/", "static")]
 # STATIC_ROOT = os.path.join(BASE_DIR + "/main_app/", "static")
 ...
