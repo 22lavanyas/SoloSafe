@@ -172,7 +172,8 @@ if DEBUG:
 
 else:
 
-    STATIC_ROOT = os.path.join(BASE_DIR + "/main_app/", "static")
+    # STATIC_ROOT = os.path.join(BASE_DIR + "/main_app/", "static")
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
     
 
 
