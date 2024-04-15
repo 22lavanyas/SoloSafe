@@ -47,7 +47,7 @@ def register(request):
 
             uidb64 = urlsafe_base64_encode(force_bytes(user.pk))
             # domain = get_current_site(request).domain
-            domain = "solosafe.onrender.com/"
+            domain = "solosafe.onrender.com"
             link = reverse(
                 "activate",
                 kwargs={
@@ -60,9 +60,9 @@ def register(request):
 
             email_subject = "Rescue - Activate you Account!"
             email_body = (
-                "Hi  "
+                "Hi "
                 + user.username  # noqa
-                + "  ,  Please use this link to verify your account\n"  # noqa
+                + ", Please use this link to verify your account\n"  # noqa
                 + activate_url  # noqa
             )
             email = EmailMessage(
