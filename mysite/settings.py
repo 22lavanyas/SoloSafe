@@ -31,7 +31,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['solosafe.onrender.com', '.vercel.app','now.sh','127.0.0.1','localhost']
 
-
+os.environ['DISPLAY'] = ':0'
 # Application definition
 
 INSTALLED_APPS = [
@@ -107,7 +107,8 @@ DATABASES = {
 }
 
 
-db_url = os.environ.get('DB_URL')
+# db_url = os.environ.get('DB_URL')
+db_url = 'postgres://solosafe_db_user:PWMslOIVmB1PT4Jvif5NykPeYDNZ9P0S@dpg-coeff6a0si5c739g8hjg-a.oregon-postgres.render.com/solosafe_db'
 DATABASES['default'] = dj_database_url.parse(db_url)
 
 
