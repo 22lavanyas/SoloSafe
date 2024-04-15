@@ -31,7 +31,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['solosafe.onrender.com', '.vercel.app','now.sh','127.0.0.1','localhost']
 
-os.environ['DISPLAY'] = ':0'
+# os.environ['DISPLAY'] = ':0'
 # Application definition
 
 INSTALLED_APPS = [
