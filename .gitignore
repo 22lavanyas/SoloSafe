@@ -115,6 +115,13 @@ ENV/
 env.bak/
 venv.bak/
 More_Details/
+rescue_QA_checks/
+rescue_QA_checks.yml
+.github/
+.idea/
+Documentation/
+.flake8
+runtime.txt
 
 
 # Spyder project settings
@@ -143,3 +150,5 @@ cython_debug/
 
 # whatsapp database
 pywhatkit_dbs.txt
+
+
