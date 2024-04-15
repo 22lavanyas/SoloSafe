@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import django
+import dj_database_url
 from django.utils.encoding import force_str
 django.utils.encoding.force_text = force_str
 
@@ -28,7 +29,7 @@ OMEGA = BASE_DIR
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['https://solosafe.onrender.com', '.vercel.app','now.sh','127.0.0.1','localhost']
 
 
 # Application definition
@@ -82,6 +83,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "mysite.wsgi.application"
 
 
+
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
@@ -91,6 +93,7 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 #         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
 #     }
 # }
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
@@ -102,6 +105,8 @@ DATABASES = {
 
     }
 }
+
+DATABASES['default'] = dj_database_url.parse("postgres://solosafe_db_user:PWMslOIVmB1PT4Jvif5NykPeYDNZ9P0S@dpg-coeff6a0si5c739g8hjg-a.oregon-postgres.render.com/solosafe_db")
 
 
 # Password validation
