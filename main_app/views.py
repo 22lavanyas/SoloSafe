@@ -9,7 +9,7 @@ from django.conf import settings
 from .models import contact
 from django.contrib.auth.models import User, auth
 from .mail import send_email
-from .whatsapp import send_whatsapp
+# from .whatsapp import send_whatsapp
 from .location import lat, log
 from .forms import UserCreateForm, LoginForm
 from django.core.mail import EmailMessage
@@ -321,13 +321,13 @@ def emergency(request):
     for c in contacts:
         send_email(name, c.email, link)
         messages.success(request,f"Email deleiverd to {name} at {c.email}")
-    try:
-        send_whatsapp(mobile_numbers, name, link)
-        messages.success(request,f"Message deleivered to {name} at {mobile_numbers}")
-    except:  # noqa
-        messages.error(
-            request, "your contact numbers contains number without country code."
-        )
+    # try:
+    #     send_whatsapp(mobile_numbers, name, link)
+    #     messages.success(request,f"Message deleivered to {name} at {mobile_numbers}")
+    # except:  # noqa
+    #     messages.error(
+    #         request, "your contact numbers contains number without country code."
+    #     )
     return render(request, "main_app/emergency_contact.html", context)
 
 
