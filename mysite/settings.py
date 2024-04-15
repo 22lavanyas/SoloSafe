@@ -106,7 +106,9 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.parse("postgres://solosafe_db_user:PWMslOIVmB1PT4Jvif5NykPeYDNZ9P0S@dpg-coeff6a0si5c739g8hjg-a.oregon-postgres.render.com/solosafe_db")
+
+db_url = os.environ.get('DB_URL')
+DATABASES['default'] = dj_database_url.parse(db_url)
 
 
 # Password validation
