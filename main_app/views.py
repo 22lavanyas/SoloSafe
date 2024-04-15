@@ -46,7 +46,8 @@ def register(request):
             user.save()
 
             uidb64 = urlsafe_base64_encode(force_bytes(user.pk))
-            domain = get_current_site(request).domain
+            # domain = get_current_site(request).domain
+            domain = "solosafe.onrender.com/"
             link = reverse(
                 "activate",
                 kwargs={
