@@ -76,7 +76,7 @@ python manage.py runserver
 ```
 
 9. View the website - 
-    - [Click here]("https://solosafe.onrender.com/")
+    - [Click here](https://solosafe.onrender.com/)
     <br> OR <br>
     - Paste the following in your browser
       ```bash
