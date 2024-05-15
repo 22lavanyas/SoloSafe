@@ -64,7 +64,7 @@ python manage.py makemigrations
 ```bash 
 python manage.py migrate
 ```
-
+'
 7. Create admin 
 ```bash
 python manage.py createsuperuser
@@ -76,7 +76,7 @@ python manage.py runserver
 ```
 
 9. View the website - 
-    - [Click here](https://localhost:8000 "https://localhost:8000")
+    - [Click here]("https://solosafe.onrender.com/")
     <br> OR <br>
     - Paste the following in your browser
       ```bash
