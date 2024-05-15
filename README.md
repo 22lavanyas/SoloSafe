@@ -36,7 +36,7 @@ Backend
 3. Fork the Repository.
 4. Clone the repository to your local machine 
 ```sh
-git clone https://github.com/<your-github-username>/Rescue.git
+git clone https://github.com/<your-github-username>/SoloSafe.git
 ```
 
 5. Change directory to main_app
